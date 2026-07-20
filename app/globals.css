@@ -1,26 +1,201 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fdfcf9;
+  --foreground: #111111;
+
+  --purple: #7c3aed;
+  --green: #6eeb83;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, sans-serif;
+}
+
+.font-pixel {
+  font-family: var(--font-pixel), monospace;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* ===========================================
+   PIXEL ANIMATIONS
+=========================================== */
+
+@keyframes pixelBlink {
+  0%,
+  48% {
+    opacity: 1;
+  }
+
+  49%,
+  52% {
+    opacity: 0;
+  }
+
+  53%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pixelFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes pixelHeart {
+  0%,
+  72%,
+  100% {
+    transform: scale(1);
+  }
+
+  78% {
+    transform: scale(1.12);
+  }
+
+  84% {
+    transform: scale(1);
+  }
+
+  90% {
+    transform: scale(1.08);
+  }
+
+  96% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pixelBounce {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scanline {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(600%);
+  }
+}
+
+/* ===========================================
+   UTILITÁRIOS
+=========================================== */
+
+.pixel-blink {
+  animation: pixelBlink 1s steps(1) infinite;
+}
+
+.pixel-heart {
+  animation: pixelHeart 2.3s steps(1) infinite;
+}
+
+.pixel-float {
+  animation: pixelFloat 2.2s steps(2) infinite;
+}
+
+.pixel-bounce {
+  animation: pixelBounce 0.35s steps(3) both;
+}
+
+/* scanline do terminal */
+
+.scanline {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.scanline::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  width: 100%;
+  height: 2px;
+
+  background: rgba(110, 235, 131, 0.08);
+
+  animation: scanline 6s linear infinite;
+}
+
+/* Hover estilo videogame */
+
+.pixel-card {
+  transition:
+    transform 120ms steps(2),
+    box-shadow 120ms steps(2),
+    border-color 120ms steps(2);
+}
+
+.pixel-card:hover {
+  transform: translate(-2px, -2px);
+}
+
+/* Cursor */
+
+.pixel-cursor {
+  animation: pixelBlink 1s steps(1) infinite;
+}
+
+/* ===========================================
+   PIXEL CURSOR
+=========================================== */
+
+@media (min-width: 768px) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  summary,
+  [role="button"] {
+    cursor: none !important;
+  }
+}
+
+/* Respeita quem prefere menos animações */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
