@@ -170,7 +170,7 @@ export function Hero() {
                 </Button>
 
                 <Button
-                  href="/curriculo-bruna-moreira.pdf"
+                  href="/bruna-moreira-candido-curriculo.pdf"
                   variant="secondary"
                   download
                 >
