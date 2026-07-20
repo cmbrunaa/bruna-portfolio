@@ -132,9 +132,7 @@ export function Hero() {
                   &lt;
                 </span>
 
-                <span className="text-center">
-                  DESENVOLVIMENTO DE SOFTWARE
-                </span>
+                <span className="text-center">DESENVOLVIMENTO DE SOFTWARE</span>
 
                 <span className="pixel-blink text-[18px] text-[#6EEB83]">
                   &gt;
@@ -156,8 +154,8 @@ export function Hero() {
             {/* Descrição */}
             <PixelReveal direction="left" delay={0.32}>
               <p className="mt-7 max-w-[560px] text-[15px] leading-8 text-[#444444] sm:text-[17px]">
-                Transformo ideias em aplicações completas, conectando
-                interface, backend, banco de dados e integrações.
+                Transformo ideias em aplicações completas, conectando interface,
+                backend, banco de dados e integrações.
                 <br />
                 Código limpo. Soluções reais. Impacto positivo.
               </p>
@@ -189,9 +187,7 @@ export function Hero() {
 
                 <span className="text-[#6EEB83]">STATUS:</span>
 
-                <span className="text-[#111111]">
-                  AVAILABLE FOR NEW QUESTS
-                </span>
+                <span className="text-[#111111]">AVAILABLE FOR NEW QUESTS</span>
 
                 <span className="pixel-blink h-3 w-2 bg-[#6EEB83]" />
               </div>
