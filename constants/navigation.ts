@@ -8,6 +8,10 @@ export const navigation = [
     href: "#sobre",
   },
   {
+    label: "EXPERIÊNCIA",
+    href: "#experiencia",
+  },
+  {
     label: "PROJETOS",
     href: "#projetos",
   },

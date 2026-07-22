@@ -1,9 +1,6 @@
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { PixelReveal } from "@/components/ui/PixelReveal";
-import {
-  PixelItem,
-  PixelStagger,
-} from "@/components/ui/PixelStagger";
+import { PixelItem, PixelStagger } from "@/components/ui/PixelStagger";
 import { projects } from "@/data/projects";
 import { Gamepad2 } from "lucide-react";
 
@@ -75,21 +72,23 @@ export function Projects() {
             </div>
 
             <a
-              href="#todos-projetos"
+              href="https://github.com/cmbrunaa"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver todos os projetos no GitHub"
               className="
-                font-pixel
-                group
-                flex
-                w-fit
-                items-center
-                gap-2
-                text-[11px]
-                font-bold
-                text-[#7C3AED]
-              "
+    font-pixel
+    group
+    flex
+    w-fit
+    items-center
+    gap-2
+    text-[11px]
+    font-bold
+    text-[#7C3AED]
+  "
             >
               VER TODOS
-
               <span
                 className="
                   text-[#57C96B]
