@@ -17,7 +17,7 @@ const profileItems = [
     icon: GraduationCap,
     label: "FORMAÇÃO",
     title: "Análise e Desenvolvimento de Sistemas",
-    description: "Graduação em fase de conclusão.",
+    description: "Graduação concluída.",
   },
   {
     number: "02",
@@ -88,9 +88,9 @@ export function About() {
           <PixelReveal direction="right" delay={0.12}>
             <div className="max-w-[720px] lg:justify-self-end">
               <p className="text-[16px] leading-8 text-[#F1ECFF] sm:text-[17px]">
-                Sou profissional de Tecnologia da Informação, com formação em
-                Análise e Desenvolvimento de Sistemas em fase de conclusão e
-                experiência em desenvolvimento web e suporte técnico.
+                Sou profissional de Tecnologia da Informação, formada em
+                Análise e Desenvolvimento de Sistemas, com experiência em
+                desenvolvimento web e suporte técnico.
               </p>
 
               <p className="mt-4 text-[16px] leading-8 text-[#F1ECFF] sm:text-[17px]">
@@ -243,6 +243,7 @@ export function About() {
               <div className="mt-8 border-t border-white/20 pt-5">
                 <div className="font-pixel flex items-center justify-between text-[10px] font-bold">
                   <span className="text-[#C4B5FD]">STATUS</span>
+
                   <span className="pixel-blink text-[#6EEB83]">
                     READY TO GROW
                   </span>

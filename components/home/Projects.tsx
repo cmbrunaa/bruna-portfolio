@@ -13,8 +13,8 @@ export function Projects() {
         scroll-mt-[120px]
         overflow-hidden
         border-b
-        border-[#7C3AED]/20
-        bg-[#FFFDF9]
+        border-[#111111]/20
+        bg-[#6D28D9]
         py-24
       "
     >
@@ -24,21 +24,21 @@ export function Projects() {
           pointer-events-none
           absolute
           inset-0
-          opacity-[0.025]
-          [background-image:linear-gradient(#7C3AED_1px,transparent_1px),linear-gradient(90deg,#7C3AED_1px,transparent_1px)]
+          opacity-[0.08]
+          [background-image:linear-gradient(#FFFFFF_1px,transparent_1px),linear-gradient(90deg,#FFFFFF_1px,transparent_1px)]
           [background-size:42px_42px]
         "
       />
 
       {/* Decoração */}
-      <div className="pointer-events-none absolute -left-44 top-10 h-[400px] w-[400px] rounded-full bg-[#6EEB83]/8 blur-3xl" />
+      <div className="pointer-events-none absolute -left-44 top-10 h-[400px] w-[400px] rounded-full bg-[#6EEB83]/10 blur-3xl" />
 
-      <div className="pointer-events-none absolute -right-44 bottom-[-100px] h-[460px] w-[460px] rounded-full bg-[#7C3AED]/8 blur-3xl" />
+      <div className="pointer-events-none absolute -right-44 bottom-[-100px] h-[460px] w-[460px] rounded-full bg-[#A78BFA]/20 blur-3xl" />
 
       <div className="relative mx-auto w-full max-w-[1600px] px-6 sm:px-8 lg:px-10">
         {/* Cabeçalho */}
         <PixelReveal direction="left">
-          <div className="flex flex-col gap-5 border-b border-[#7C3AED]/35 pb-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-5 border-b border-white/35 pb-5 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-3">
               <span
                 className="
@@ -50,7 +50,7 @@ export function Projects() {
                   border-2
                   border-[#111111]
                   bg-[#6EEB83]
-                  shadow-[3px_3px_0_#7C3AED]
+                  shadow-[3px_3px_0_#111111]
                 "
               >
                 <Gamepad2
@@ -61,11 +61,11 @@ export function Projects() {
               </span>
 
               <div>
-                <p className="font-pixel mb-2 text-[9px] font-bold tracking-[0.06em] text-[#7C3AED]">
+                <p className="font-pixel mb-2 text-[9px] font-bold tracking-[0.06em] text-[#6EEB83]">
                   &gt; STAGE SELECT
                 </p>
 
-                <h2 className="font-pixel text-[22px] font-bold text-[#111111] sm:text-[26px]">
+                <h2 className="font-pixel text-[22px] font-bold text-white sm:text-[26px]">
                   PROJETOS EM DESTAQUE
                 </h2>
               </div>
@@ -77,21 +77,22 @@ export function Projects() {
               rel="noopener noreferrer"
               aria-label="Ver todos os projetos no GitHub"
               className="
-    font-pixel
-    group
-    flex
-    w-fit
-    items-center
-    gap-2
-    text-[11px]
-    font-bold
-    text-[#7C3AED]
-  "
+                font-pixel
+                group
+                flex
+                w-fit
+                items-center
+                gap-2
+                text-[11px]
+                font-bold
+                text-white
+              "
             >
               VER TODOS
+
               <span
                 className="
-                  text-[#57C96B]
+                  text-[#6EEB83]
                   transition-transform
                   duration-100
                   group-hover:translate-x-1
@@ -105,7 +106,7 @@ export function Projects() {
 
         {/* Cards */}
         <PixelStagger className="mt-8 grid gap-6 lg:grid-cols-3">
-          {projects.slice(0, 3).map((project, index) => (
+          {projects.map((project, index) => (
             <PixelItem key={project.id} className="h-full">
               <div className="relative h-full">
                 {/* Número da fase */}
@@ -124,7 +125,7 @@ export function Projects() {
                     text-[9px]
                     font-bold
                     text-[#111111]
-                    shadow-[3px_3px_0_#7C3AED]
+                    shadow-[3px_3px_0_#111111]
                   "
                 >
                   STAGE 0{index + 1}
@@ -146,9 +147,9 @@ export function Projects() {
         {/* Indicador inferior */}
         <PixelReveal delay={0.2}>
           <div className="mt-10 flex items-center justify-center gap-2">
-            <span className="h-2 w-8 bg-[#7C3AED]" />
+            <span className="h-2 w-8 bg-white" />
             <span className="h-2 w-2 bg-[#6EEB83]" />
-            <span className="h-2 w-2 border border-[#7C3AED]" />
+            <span className="h-2 w-2 border border-white" />
           </div>
         </PixelReveal>
       </div>

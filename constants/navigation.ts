@@ -16,6 +16,10 @@ export const navigation = [
     href: "#projetos",
   },
   {
+    label: "CERTIFICAÇÕES",
+    href: "#certificacoes",
+  },
+  {
     label: "HABILIDADES",
     href: "#habilidades",
   },

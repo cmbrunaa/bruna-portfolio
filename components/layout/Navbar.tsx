@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  Briefcase,
-  Code2,
-  Mail,
-  Menu,
-  X,
-} from "lucide-react";
+import { Briefcase, Code2, Mail, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -15,6 +9,7 @@ const navigation = [
   { label: "SOBRE", href: "#sobre" },
   { label: "EXPERIÊNCIA", href: "#experiencia" },
   { label: "PROJETOS", href: "#projetos" },
+  { label: "CERTIFICAÇÕES", href: "#certificacoes" },
   { label: "HABILIDADES", href: "#habilidades" },
   { label: "CONTATO", href: "#contato" },
 ];
@@ -89,8 +84,9 @@ export function Navbar() {
           lg:grid
           lg:min-h-[106px]
           lg:grid-cols-[1fr_auto_1fr]
-          lg:px-8
-          xl:px-10
+          lg:px-6
+          xl:px-8
+          2xl:px-10
         "
       >
         {/* Cantos pixelados */}
@@ -113,7 +109,8 @@ export function Navbar() {
             items-center
             gap-2
             sm:gap-4
-            lg:gap-5
+            lg:gap-3
+            2xl:gap-5
           "
         >
           <Image
@@ -132,7 +129,8 @@ export function Navbar() {
               group-hover:-translate-x-1
               group-hover:-translate-y-1
               sm:h-[64px]
-              lg:h-[78px]
+              lg:h-[64px]
+              2xl:h-[78px]
             "
           />
 
@@ -147,7 +145,8 @@ export function Navbar() {
                 tracking-[0.01em]
                 min-[380px]:text-[21px]
                 sm:text-[24px]
-                lg:text-[27px]
+                lg:text-[21px]
+                2xl:text-[27px]
               "
             >
               <span className="text-[#7C3AED]">BRUNA</span>
@@ -168,7 +167,8 @@ export function Navbar() {
                 min-[380px]:flex
                 sm:mt-3
                 sm:text-[12px]
-                lg:text-[13px]
+                lg:text-[10px]
+                2xl:text-[13px]
               "
             >
               <span className="pixel-blink text-[#57C96B]">&gt;</span>
@@ -185,10 +185,10 @@ export function Navbar() {
             hidden
             items-center
             justify-center
-            gap-6
+            gap-3
             lg:flex
-            xl:gap-10
-            2xl:gap-14
+            xl:gap-4
+            2xl:gap-7
           "
         >
           {navigation.map((item, index) => {
@@ -206,13 +206,13 @@ export function Navbar() {
                   h-[104px]
                   items-center
                   whitespace-nowrap
-                  text-[14px]
+                  text-[10px]
                   font-bold
                   tracking-[0.01em]
                   transition-colors
                   duration-100
-                  xl:text-[15px]
-                  2xl:text-[17px]
+                  xl:text-[11px]
+                  2xl:text-[13px]
                   ${
                     isActive
                       ? "text-[#7C3AED]"
@@ -241,7 +241,7 @@ export function Navbar() {
         </nav>
 
         {/* Redes sociais desktop */}
-        <div className="hidden justify-self-end gap-3 lg:flex xl:gap-4">
+        <div className="hidden justify-self-end gap-2 lg:flex 2xl:gap-4">
           {socialLinks.map((social, index) => {
             const Icon = social.icon;
 
@@ -262,8 +262,8 @@ export function Navbar() {
                 className={`
                   group
                   flex
-                  h-[50px]
-                  w-[50px]
+                  h-[42px]
+                  w-[42px]
                   items-center
                   justify-center
                   rounded-[4px]
@@ -275,8 +275,10 @@ export function Navbar() {
                   hover:-translate-y-1
                   hover:bg-[#FFFDF9]
                   hover:shadow-[4px_4px_0_#DDD6FE]
-                  xl:h-[56px]
-                  xl:w-[56px]
+                  xl:h-[46px]
+                  xl:w-[46px]
+                  2xl:h-[56px]
+                  2xl:w-[56px]
                   ${
                     index === 0
                       ? "border-[#111111] text-[#111111]"
@@ -287,14 +289,14 @@ export function Navbar() {
                 `}
               >
                 <Icon
-                  size={24}
+                  size={21}
                   strokeWidth={2.2}
                   className="
                     transition-transform
                     duration-100
                     group-hover:-translate-y-0.5
-                    xl:h-[26px]
-                    xl:w-[26px]
+                    2xl:h-[26px]
+                    2xl:w-[26px]
                   "
                 />
               </a>
@@ -374,8 +376,10 @@ export function Navbar() {
               relative
               mx-auto
               mt-3
+              max-h-[calc(100vh-125px)]
               w-full
               max-w-[1800px]
+              overflow-y-auto
               rounded-[10px]
               border-2
               border-[#7C3AED]
@@ -422,7 +426,7 @@ export function Navbar() {
                     border-2
                     px-4
                     py-3
-                    text-[14px]
+                    text-[13px]
                     font-bold
                     transition-[transform,box-shadow,background-color,color]
                     duration-100
@@ -439,14 +443,11 @@ export function Navbar() {
                 >
                   <span className="flex items-center gap-3">
                     <span
-                      className={`
-                        text-[12px]
-                        ${
-                          index === 0
-                            ? "text-[#57C96B]"
-                            : "text-[#7C3AED]"
-                        }
-                      `}
+                      className={
+                        index === 0
+                          ? "text-[12px] text-[#57C96B]"
+                          : "text-[12px] text-[#7C3AED]"
+                      }
                     >
                       {index === 0 ? "▶" : "◆"}
                     </span>

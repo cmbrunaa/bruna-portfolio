@@ -11,6 +11,7 @@ export const projects = [
     demo: "",
     featured: true,
   },
+
   {
     id: 2,
     title: "ValidaFlow",
@@ -23,15 +24,24 @@ export const projects = [
     demo: "",
     featured: true,
   },
+
   {
     id: 3,
-    title: "Backlogd",
-    subtitle: "Gerenciador de jogos",
+    title: "HelpDesk",
+    subtitle: "Sistema de gerenciamento de chamados",
     description:
-      "Plataforma para gerenciamento da biblioteca de jogos, desenvolvida com Django, Docker e publicada na Microsoft Azure.",
-    technologies: ["Django", "Docker", "Azure"],
-    image: "/sprites/projects/backlogd.png",
-    github: "https://github.com/cmbrunaa/backlogd",
+      "Sistema web para gerenciamento de chamados de suporte técnico, com autenticação, controle de acesso, fluxo de atendimento, comentários, histórico, filtros e integração entre frontend e API.",
+    technologies: [
+      "Laravel",
+      "PHP",
+      "PostgreSQL",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
+    image: "/sprites/projects/helpdesk.png",
+    github: "https://github.com/cmbrunaa/helpdesk",
     demo: "",
     featured: true,
   },
