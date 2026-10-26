@@ -36,7 +36,7 @@ const certifications = [
       "PYTHON",
       "SQLITE",
     ],
-    certificateUrl: "/certificates/validaflow.png",
+    certificateUrl: "/certificates/certificado.jpeg",
   },
 ];
 
