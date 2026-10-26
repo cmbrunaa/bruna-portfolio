@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -8,7 +9,6 @@ import {
   PixelStagger,
 } from "@/components/ui/PixelStagger";
 import {
-  Award,
   Building2,
   CheckCircle2,
   FileText,
@@ -66,25 +66,25 @@ export function Certifications() {
       <section
         id="certificacoes"
         className="
-        relative
-        scroll-mt-[130px]
-        overflow-hidden
-        border-y
-        border-[#7C3AED]/20
-        bg-[#FFFDF9]
-        py-24
-      "
+          relative
+          scroll-mt-[130px]
+          overflow-hidden
+          border-y
+          border-[#7C3AED]/20
+          bg-[#FFFDF9]
+          py-24
+        "
       >
         {/* Grade de fundo */}
         <div
           className="
-          pointer-events-none
-          absolute
-          inset-0
-          opacity-[0.035]
-          [background-image:linear-gradient(#7C3AED_1px,transparent_1px),linear-gradient(90deg,#7C3AED_1px,transparent_1px)]
-          [background-size:38px_38px]
-        "
+            pointer-events-none
+            absolute
+            inset-0
+            opacity-[0.035]
+            [background-image:linear-gradient(#7C3AED_1px,transparent_1px),linear-gradient(90deg,#7C3AED_1px,transparent_1px)]
+            [background-size:38px_38px]
+          "
         />
 
         {/* Glows */}
@@ -104,15 +104,18 @@ export function Certifications() {
 
                 <h2 className="font-pixel mt-5 max-w-[700px] text-[40px] font-bold leading-[1.08] text-[#111111] sm:text-[50px] lg:text-[58px]">
                   Certificações e{" "}
-                  <span className="text-[#7C3AED]">reconhecimentos</span>
+                  <span className="text-[#7C3AED]">
+                    reconhecimentos
+                  </span>
                 </h2>
               </div>
             </PixelReveal>
 
             <PixelReveal direction="right" delay={0.12}>
               <p className="max-w-[700px] text-[16px] leading-8 text-[#555555] sm:text-[17px] lg:justify-self-end">
-                Reconhecimentos obtidos durante minha formação e participação em
-                projetos desenvolvidos em parceria com instituições e empresas.
+                Reconhecimentos obtidos durante minha formação e
+                participação em projetos desenvolvidos em parceria
+                com instituições e empresas.
               </p>
             </PixelReveal>
           </div>
@@ -133,51 +136,53 @@ export function Certifications() {
           {/* Certificados */}
           <PixelStagger className="mt-12 grid gap-8">
             {certifications.map((certification) => {
-              const hasCertificate = Boolean(certification.certificateUrl);
+              const hasCertificate = Boolean(
+                certification.certificateUrl
+              );
 
               return (
                 <PixelItem key={certification.id}>
                   <article
                     className="
-                    pixel-card
-                    relative
-                    overflow-hidden
-                    rounded-[8px]
-                    border-2
-                    border-[#7C3AED]
-                    bg-white
-                    shadow-[8px_8px_0_#6EEB83]
-                  "
+                      pixel-card
+                      relative
+                      overflow-hidden
+                      rounded-[8px]
+                      border-2
+                      border-[#7C3AED]
+                      bg-white
+                      shadow-[8px_8px_0_#6EEB83]
+                    "
                   >
                     {/* Barra superior */}
                     <div
                       className="
-                      flex
-                      flex-col
-                      gap-4
-                      border-b-2
-                      border-[#7C3AED]
-                      bg-[#F3E8FF]
-                      px-6
-                      py-5
-                      sm:flex-row
-                      sm:items-center
-                      sm:justify-between
-                    "
+                        flex
+                        flex-col
+                        gap-4
+                        border-b-2
+                        border-[#7C3AED]
+                        bg-[#F3E8FF]
+                        px-6
+                        py-5
+                        sm:flex-row
+                        sm:items-center
+                        sm:justify-between
+                      "
                     >
                       <div className="flex items-center gap-3">
                         <span
                           className="
-                          flex
-                          h-11
-                          w-11
-                          items-center
-                          justify-center
-                          border-2
-                          border-[#111111]
-                          bg-[#6EEB83]
-                          shadow-[3px_3px_0_#7C3AED]
-                        "
+                            flex
+                            h-11
+                            w-11
+                            items-center
+                            justify-center
+                            border-2
+                            border-[#111111]
+                            bg-[#6EEB83]
+                            shadow-[3px_3px_0_#7C3AED]
+                          "
                         >
                           <Trophy
                             size={22}
@@ -199,20 +204,20 @@ export function Certifications() {
 
                       <span
                         className="
-                        font-pixel
-                        flex
-                        w-fit
-                        items-center
-                        gap-2
-                        border
-                        border-[#57C96B]
-                        bg-white
-                        px-3
-                        py-2
-                        text-[9px]
-                        font-bold
-                        text-[#57C96B]
-                      "
+                          font-pixel
+                          flex
+                          w-fit
+                          items-center
+                          gap-2
+                          border
+                          border-[#57C96B]
+                          bg-white
+                          px-3
+                          py-2
+                          text-[9px]
+                          font-bold
+                          text-[#57C96B]
+                        "
                       >
                         <CheckCircle2 size={14} />
                         CONCLUÍDO
@@ -221,70 +226,81 @@ export function Certifications() {
 
                     {/* Conteúdo */}
                     <div className="grid gap-10 p-7 lg:grid-cols-[0.75fr_1.25fr] lg:p-9">
-                      {/* Área visual */}
+                      {/* Área visual: prévia do certificado */}
                       <div
                         className="
-                        relative
-                        flex
-                        min-h-[280px]
-                        flex-col
-                        items-center
-                        justify-center
-                        overflow-hidden
-                        border-2
-                        border-[#111111]
-                        bg-[#11131A]
-                        p-8
-                        text-center
-                        shadow-[6px_6px_0_#C4B5FD]
-                      "
+                          relative
+                          flex
+                          min-h-[280px]
+                          items-center
+                          justify-center
+                          overflow-hidden
+                          border-2
+                          border-[#111111]
+                          bg-[#11131A]
+                          p-5
+                          shadow-[6px_6px_0_#C4B5FD]
+                        "
                       >
                         {/* Grade interna */}
                         <div
                           className="
-                          pointer-events-none
-                          absolute
-                          inset-0
-                          opacity-[0.07]
-                          [background-image:linear-gradient(#FFFFFF_1px,transparent_1px),linear-gradient(90deg,#FFFFFF_1px,transparent_1px)]
-                          [background-size:24px_24px]
-                        "
+                            pointer-events-none
+                            absolute
+                            inset-0
+                            opacity-[0.07]
+                            [background-image:linear-gradient(#FFFFFF_1px,transparent_1px),linear-gradient(90deg,#FFFFFF_1px,transparent_1px)]
+                            [background-size:24px_24px]
+                          "
                         />
 
-                        <div className="relative">
-                          <div
+                        {hasCertificate ? (
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setSelectedCertificate(certification)
+                            }
+                            aria-label="Ampliar certificado"
                             className="
-                            mx-auto
-                            flex
-                            h-24
-                            w-24
-                            items-center
-                            justify-center
-                            border-2
-                            border-[#6EEB83]
-                            bg-[#5B21B6]
-                            shadow-[6px_6px_0_#6EEB83]
-                          "
+                              relative
+                              block
+                              w-full
+                              cursor-zoom-in
+                              focus-visible:outline
+                              focus-visible:outline-2
+                              focus-visible:outline-offset-4
+                              focus-visible:outline-[#6EEB83]
+                            "
                           >
-                            <Award
-                              size={48}
-                              strokeWidth={1.7}
-                              className="text-white"
+                            <img
+                              src={certification.certificateUrl}
+                              alt={`Certificado ${certification.title}`}
+                              className="
+                                mx-auto
+                                max-h-[420px]
+                                w-full
+                                object-contain
+                                transition-transform
+                                duration-100
+                                hover:scale-[1.02]
+                              "
                             />
+                          </button>
+                        ) : (
+                          <div className="relative text-center">
+                            <p className="font-pixel text-[12px] font-bold text-[#6EEB83]">
+                              CERTIFICATE DATA
+                            </p>
+
+                            <p className="font-pixel mt-3 text-[10px] leading-5 text-[#C4B5FD]">
+                              IMAGEM DO CERTIFICADO
+                              <br />
+                              SERÁ ADICIONADA EM BREVE
+                            </p>
+
+                            <span className="pixel-blink mt-6 inline-block h-3 w-3 bg-[#6EEB83]" />
                           </div>
-
-                          <p className="font-pixel mt-8 text-[12px] font-bold text-[#6EEB83]">
-                            CERTIFICATE DATA
-                          </p>
-
-                          <p className="font-pixel mt-3 text-[10px] leading-5 text-[#C4B5FD]">
-                            IMAGEM DO CERTIFICADO
-                            <br />
-                            SERÁ ADICIONADA EM BREVE
-                          </p>
-
-                          <span className="pixel-blink mt-6 inline-block h-3 w-3 bg-[#6EEB83]" />
-                        </div>
+                        )}
                       </div>
 
                       {/* Informações */}
@@ -356,18 +372,18 @@ export function Certifications() {
                               <PixelItem key={skill}>
                                 <span
                                   className="
-                                  font-pixel
-                                  inline-block
-                                  border
-                                  border-[#7C3AED]
-                                  bg-white
-                                  px-3
-                                  py-2
-                                  text-[9px]
-                                  font-bold
-                                  text-[#7C3AED]
-                                  shadow-[2px_2px_0_#C4B5FD]
-                                "
+                                    font-pixel
+                                    inline-block
+                                    border
+                                    border-[#7C3AED]
+                                    bg-white
+                                    px-3
+                                    py-2
+                                    text-[9px]
+                                    font-bold
+                                    text-[#7C3AED]
+                                    shadow-[2px_2px_0_#C4B5FD]
+                                  "
                                 >
                                   {skill}
                                 </span>
@@ -385,25 +401,25 @@ export function Certifications() {
                                 setSelectedCertificate(certification)
                               }
                               className="
-                              font-pixel
-                              inline-flex
-                              min-h-[52px]
-                              items-center
-                              justify-center
-                              gap-3
-                              border-2
-                              border-[#111111]
-                              bg-[#6EEB83]
-                              px-6
-                              text-[10px]
-                              font-bold
-                              text-[#111111]
-                              shadow-[4px_4px_0_#7C3AED]
-                              transition-transform
-                              duration-100
-                              hover:-translate-x-1
-                              hover:-translate-y-1
-                            "
+                                font-pixel
+                                inline-flex
+                                min-h-[52px]
+                                items-center
+                                justify-center
+                                gap-3
+                                border-2
+                                border-[#111111]
+                                bg-[#6EEB83]
+                                px-6
+                                text-[10px]
+                                font-bold
+                                text-[#111111]
+                                shadow-[4px_4px_0_#7C3AED]
+                                transition-transform
+                                duration-100
+                                hover:-translate-x-1
+                                hover:-translate-y-1
+                              "
                             >
                               <FileText size={18} />
                               VER CERTIFICADO
@@ -411,21 +427,21 @@ export function Certifications() {
                           ) : (
                             <div
                               className="
-                              font-pixel
-                              inline-flex
-                              min-h-[52px]
-                              cursor-not-allowed
-                              items-center
-                              justify-center
-                              gap-3
-                              border-2
-                              border-[#AAAAAA]
-                              bg-[#F3F3F3]
-                              px-6
-                              text-[10px]
-                              font-bold
-                              text-[#888888]
-                            "
+                                font-pixel
+                                inline-flex
+                                min-h-[52px]
+                                cursor-not-allowed
+                                items-center
+                                justify-center
+                                gap-3
+                                border-2
+                                border-[#AAAAAA]
+                                bg-[#F3F3F3]
+                                px-6
+                                text-[10px]
+                                font-bold
+                                text-[#888888]
+                              "
                             >
                               <FileText size={18} />
                               CERTIFICADO EM BREVE
@@ -451,22 +467,22 @@ export function Certifications() {
           <PixelReveal direction="up" delay={0.2}>
             <div
               className="
-              pixel-card
-              mt-12
-              flex
-              flex-col
-              gap-5
-              border-2
-              border-[#111111]
-              bg-[#11131A]
-              px-7
-              py-6
-              text-white
-              shadow-[6px_6px_0_#7C3AED]
-              sm:flex-row
-              sm:items-center
-              sm:justify-between
-            "
+                pixel-card
+                mt-12
+                flex
+                flex-col
+                gap-5
+                border-2
+                border-[#111111]
+                bg-[#11131A]
+                px-7
+                py-6
+                text-white
+                shadow-[6px_6px_0_#7C3AED]
+                sm:flex-row
+                sm:items-center
+                sm:justify-between
+              "
             >
               <div>
                 <p className="font-pixel text-[10px] font-bold text-[#6EEB83]">
@@ -474,7 +490,8 @@ export function Certifications() {
                 </p>
 
                 <p className="font-pixel mt-2 text-[15px] font-bold sm:text-[17px]">
-                  Reconhecimento por um projeto desenvolvido para um desafio real.
+                  Reconhecimento por um projeto desenvolvido para um
+                  desafio real.
                 </p>
               </div>
 
@@ -486,10 +503,19 @@ export function Certifications() {
         </Container>
       </section>
 
-      {/* POPUP — ADICIONADO */}
+      {/* Popup do certificado */}
       {selectedCertificate && (
         <div
-          className="fixed inset-0 z-[999] flex items-center justify-center bg-[#111111]/80 p-4"
+          className="
+            fixed
+            inset-0
+            z-[999]
+            flex
+            items-center
+            justify-center
+            bg-[#111111]/80
+            p-4
+          "
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) {
               setSelectedCertificate(null);
@@ -499,6 +525,7 @@ export function Certifications() {
           <div
             role="dialog"
             aria-modal="true"
+            aria-label={`Certificado ${selectedCertificate.title}`}
             className="
               relative
               flex
@@ -513,6 +540,7 @@ export function Certifications() {
               shadow-[8px_8px_0_#6EEB83,16px_16px_0_#7C3AED]
             "
           >
+            {/* Cabeçalho da popup */}
             <div
               className="
                 flex
@@ -543,6 +571,7 @@ export function Certifications() {
                   flex
                   h-9
                   w-9
+                  shrink-0
                   items-center
                   justify-center
                   border-2
@@ -562,6 +591,7 @@ export function Certifications() {
               </button>
             </div>
 
+            {/* Imagem ampliada */}
             <div
               className="
                 min-h-0
@@ -593,6 +623,7 @@ export function Certifications() {
               </div>
             </div>
 
+            {/* Rodapé da popup */}
             <div
               className="
                 flex
